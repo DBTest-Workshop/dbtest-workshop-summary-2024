@@ -120,7 +120,8 @@
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
-With the ever-increasing amount of data stored and processed, there is an ongoing need for testing database management systems but also data-intensive systems in general. Specifically, emerging new technologies such as Non-Volatile Memory impose new challenges (e.g., avoiding persistent memory leaks and partial writes), and novel system designs including FPGAs, GPUs, and RDMA call for additional attention and sophistication.
+With the ever-increasing amount of data stored and processed and ever-evolving hardware technology, there is not only an ongoing need for testing database management systems but also data-intensive systems in general.
+%Furthermore, emerging new technologies such as Non-Volatile Memory impose new challenges (e.g., avoiding persistent memory leaks and partial writes), and novel system designs targeting FPGAs, GPUs, and RDMA call for additional attention and sophistication to testing.
 Reviving the previous success of the eight previous workshops, the goal of DBTest 2022 is to bring researchers and practitioners from academia and industry together to discuss key problems and ideas related to testing database systems and applications. The long-term objective is to reduce the cost and time required to test and tune data management and processing products so that users and vendors can spend more time and energy on actual innovations.
 \end{abstract}
 
@@ -173,16 +174,17 @@ Like previous instances, one of the remarkable aspects was the high number of in
 On the one hand, there was a lot of positive feedback and we were encouraged by the audience to re-establish DBTest in a yearly cadence.
 On the other hand, in order to not repeat past mistakes and as announced in the 2018 workshop application, we decided to only run with a biannual cadence to prevent from running out of topics and high-quality submissions.
 As a result, we applied and held the 8th instance for the DBTest workshop in 2020 in virtual format due to the pandemic with 10 submissions in total (out of which 5 were accepted as full paper and 2 were accepted as short poster papers).
-We think the slightly lower number of submissions were due to the impact of the start of the pandemic on people.
+We think the slightly lower number of submissions were due to the impact of the start of the pandemic.
 Despite this, we received very high-quality submissions, and the workshop once again had a good mix of both academic and industry participants and presenters. In total, we had 150 registrants, and the three sessions had 72, 57, and 48 participants, respectively.
 Consequentially, we decided to hold another instance of DBTest now for SIGMOD 2022.
+
 We believe that there is the need and interest for discussing topics that are related to not only testing database management systems but also data-intensive systems in general.
-Specifically, emerging new technologies such as Non-Volatile Memory impose new challenges (e.g., avoiding persistent memory leaks and partial writes), and novel system designs including FPGAs, GPUs, and RDMA call for additional attention and sophistication.
+Furthermore, emerging new technologies such as Non-Volatile Memory impose new challenges (e.g., avoiding persistent memory leaks and partial writes), and novel system designs targeting FPGAs, GPUs, and RDMA call for additional attention and sophistication to testing.
 Moreover, there are new classes of data-driven applications (i.e., machine learning and big data scenarios) that need to be considered.
 Another dimension includes completely new system designs---such as crowdsourcing applications, where testing imposes various monetary and functional challenges (i.e., result set quality and verification), scalable machine learning systems that combine distributed computing with modern hardware, or even cloud-based data management systems with high release cadence and extreme global reach.
 Finally, there is an ever-increasing popularity and proliferation of NoSQL systems.
 These systems are taking new approaches and design decisions (e.g. by replacing the traditional ACID guarantees with relaxed consistency models (BASE)) to increase performance and scalability.
-Consequentially, they require special testing efforts and rigor to ensure classical database strengths such as reliability, integrity, and performance can be successfully carried over to these novel system architectures and designs.
+Therefore, they require special testing efforts and rigor to ensure classical database strengths such as reliability, integrity, and performance can be successfully carried over to these novel system architectures and designs.
 
 \section{Topics of Interest}
 The workshop focuses on the following topics:
@@ -241,14 +243,13 @@ We are grateful for the support from the steering committee as well as the hard 
 \end{itemize}
 
 \section{Keynote Speakers}
-\textbf{Mark Raasveldt} is the co-founder of DuckDB Labs, where he currently works as CTO and lead developer on the DuckDB database system. He is also working as a postdoc in the Database Architectures group at the Centrum Wiskunde \& Informatica (CWI). Mark did his PhD at the CWI, working on efficient integration of machine learning and analytics programs with relational database management systems. 
-
 % http://people.cs.uchicago.edu/~shanlu/about/bio_ShanLu.html
 \textbf{Shan Lu} is a Professor in the Department of Computer Science at the University of Chicago.
 She received her Ph.D. at University of Illinois, Urbana-Champaign, in 2008. She was the Clare Boothe Luce Assistant Professor of Computer Sciences at University of Wisconsin, Madison, from 2009 to 2014. Her research focuses on software reliability and efficiency, particularly detecting, diagnosing, and fixing functional and performance bugs in large software systems.
 Shan is an ACM Distinguished Member (2019 class), an Alfred P. Sloan Research Fellow (2014), a Distinguished Educator Alumnus from Department of Computer Science at University of Illinois (2013), and NSF Career Award recipient (2010).
 Her co-authored papers won Google Scholar Classic Paper 2017, Best Paper Awards at ACM-SIGOPS SOSP 2019, USENIX OSDI 2016 and USENIX FAST 2013, 3 ACM-SIGSOFT Distinguished Paper Awards at ICSE 2019, ICSE 2015 and FSE 2014, an ACM CHI Honorable Mention Award 2021, an ACM-SIGPLAN Research Highlight Award at PLDI 2011, and an IEEE Micro Top Picks in ASPLOS 2006. Shan is also a member of the informal ASPLOS Hall of Fame.
 
+\textbf{Mark Raasveldt} is the co-founder of DuckDB Labs, where he currently works as CTO and lead developer on the DuckDB database system. He is also working as a postdoc in the Database Architectures group at the Centrum Wiskunde \& Informatica (CWI). Mark did his PhD at the CWI, working on efficient integration of machine learning and analytics programs with relational database management systems. 
 
 \section{Format and Planned Timeline}
 
