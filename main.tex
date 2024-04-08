@@ -84,7 +84,7 @@
 %%
 %% The "title" command has an optional parameter,
 %% allowing the author to define a "short title" to be used in page headers.
-\title{DBTest ‘24: 10th International Workshop on Testing Database Systems}
+\title{DBTest'24: 10th International Workshop on Testing Database Systems}
 
 
 %%
@@ -122,7 +122,8 @@
 \begin{abstract}
 With the ever-increasing amount of data stored and processed and ever-evolving hardware technology, there is not only an ongoing need for testing database management systems but also data-intensive systems in general.
 %Furthermore, emerging new technologies such as Non-Volatile Memory impose new challenges (e.g., avoiding persistent memory leaks and partial writes), and novel system designs targeting FPGAs, GPUs, and RDMA call for additional attention and sophistication to testing.
-Reviving the previous success of the nine previous workshops, the goal of DBTest 2024 is to bring researchers and practitioners from academia and industry together to discuss key problems and ideas related to testing database systems and applications. The long-term objective is to reduce the cost and time required to test and tune data management and processing products so that users and vendors can spend more time and energy on actual innovations.
+Reviving the previous success of nine previous workshops, the goal of the Workshop on Testing Database Systems (DBTest) 2024 is to bring researchers and practitioners from academia and industry together to discuss key problems and ideas related to testing database systems and applications.
+The long-term objective of our efforts is to reduce the cost and time required to test and tune data management and processing products so that users and vendors can spend more time and energy on actual innovations.
 \end{abstract}
 
 %%
@@ -168,68 +169,54 @@ Reviving the previous success of the nine previous workshops, the goal of DBTest
 \maketitle
 
 \section{Workshop Motivation and Scope}
-We are running the 10th instance of the Workshop on Testing Database Systems (DBTest) at SIGMOD
-2024. After four years of absence, DBTest was successfully revived at SIGMOD 2018, with over 40
-participants, 15 paper submissions (out of which 8 were accepted), and three industry sponsors (SAP,
-Snowflake, Undo). Like previous instances, one of the remarkable aspects was the high number of industry
-participants and submissions, creating an interesting mix of both academic work and industry
-perspectives.
+Database management systems are complex systems used in a variety of circumstances ranging from standalone secure instances, over distributed systems to deployments in the cloud, running diverse workloads such as traditional transactional or analytical workloads but also modern machine learning (ML) workloads, with a variety of features both generalized and specialized to use cases and hardware.
+The evaluation and comparison of these systems is a non-trivial but crucially important problem to confirm their validity and success.
+Testing and benchmarking are the de facto methods with which we can address this problem.
+As such, testing allows us to verify the validity of systems and their features, i.e.,~whether they concisely and correctly address a data management problem, while benchmarking allows us to evaluate and compare the performance of these systems.
 
-After deciding to revive DBTest, we got a lot of positive feedback and were encouraged by the audience
-to re-establish DBTest in a yearly cadence. However, in order to not repeat past mistakes and as
-announced in the 2018 workshop application, we decided to only run with a biannual cadence to prevent
-from running out of topics and high-quality submissions. As a result, we applied and held the 8th instance
-for the DBTest workshop in 2020 in virtual format due to the pandemic with 10 submissions in total (out
-of which 5 were accepted as full paper and 2 were accepted as short poster papers). We think the slightly
-lower number of submissions were due to the impact of the start of the pandemic on people. Despite this
-we received very high-quality submissions, and the workshop once again had a good mix of both academic
-and industry participants and presenters. In total, we had 150 registrants, and the three sessions had 72,
-57, and 48 participants, respectively. In 2022, we held DBTest in a hybrid mode. We had a relatively low
-number of 5 submissions. However, during the workshop, 15--35 attendees participated in-person, while
-15--25 participated online, and the discussion and Q/A sessions were highly interactive. Since then, we
-have noticed an increased interest in the workshop’s topic, such as shown by, for example, a Dagstuhl
-seminar on “Ensuring the Reliability and Robustness of Database Management Systems” held in
-October/November 2023. As part of the seminar, around 40 researchers and practitioners came together
-and discussed challenges and ways forward. As another example, a SIGMOD 2023 best paper award was
-given to a DBMS testing work, demonstrating the increased importance of the area. Overall, we were motivated to propose another instance of the workshop.
+In industry as well as in research projects, we see a lot of different approaches to the testing and benchmarking of data management systems due to these system's inherent complexity and diversity.
+For example, we have seen these approaches and the interest in data management testing methodology shift from monolithic systems to novel cloud settings, driven both by an increase and diversity in workloads as well as hardware such as FPGAs or GPUs.
+These workloads as well as new classes of data-driven applications, i.e.,~machine learning and big data scenarios, represent new challenges in this space that have impacted how we think about the evaluation of data management systems and their performance.
+This is just one direction that data management systems are developing into, at the same time, SQL and no-SQL engines alike are evolving, and new engine concepts such as unified engines are being created.
+Consequentially, they require special testing efforts and rigor to ensure classical database strengths such as reliability, integrity, and performance can be successfully carried over to these novel system architectures and designs.
 
-We believe that there is the need and interest for discussing topics that are related to not only testing
-database management systems but also data-intensive systems in general. Over the last few years, we
-have seen an increase in academic and industry work focusing on benchmarking and performance
-evaluation in novel cloud settings, driven both by an increase and diversity in workloads as well as
-hardware such as FPGAs or GPUs. Moreover, there are new classes of data-driven applications (i.e.,
-machine learning and big data scenarios) that need to be considered. At the same time, SQL and no-SQL
-engines alike are developing, and new engine concepts such unified engines are being created.
-Consequentially, they require special testing efforts and rigor to ensure classical database strengths such
-as reliability, integrity, and performance can be successfully carried over to these novel system
-architectures and designs.
+The goal of the 10th Workshop on Testing Database Systems (DBTest) co-located with SIGMOD is to bring together reseachers from academia and industry to discuss these diverse topics.
+It allows researchers to discuss new approaches to testing and benchmarking, explore how they can be deployed in practice, and exchange novel insights and observations about existing systems.
+Topics for the workshop include but are not limited to testing methodology for a variety of systems, frameworks, and technologies relevant for the database community, experience reports that discuss the implementation of testing, benchmarking, and performance evaluation platforms in industry, and how we as a community can make database performance and research reproducible.
+
+\section{Categories of Papers}
+\begin{itemize}
+    \item {\bf Research Papers} propose new approaches, methodology and techniques related to testing and performance evaluation for data management systems.
+    \item {\bf Experience Papers} showcase how testing strategies and approaches are applied in practicing, highlighting interesting and novel insights into how they can be effectively utilized and improved.
+    \item {\bf Talk Proposals} describe a specific topic relevant to the workshop that the authors want to receive feedback on from the community. These proposals are not part of the proceedings of this workshop.
+\end{itemize}
 
 \section{Topics of Interest}
 The workshop focuses on the following topics:
 \begin{itemize}
-    \item Reproducibility of database research (new!)
-	\item Testing and benchmarking of learning-based database systems (new!)
-	\item Testing of database systems, storage services, and database applications
-	\item Testing of database systems using novel hardware and software technology (non-volatile memory, hardware transactional memory, …)
-	\item Testing heterogeneous systems with hardware accelerators (GPUs, FPGAs, ASICs, …)
-	\item Testing distributed and big data systems
-	\item Testing machine learning systems
-	\item Specific challenges of testing and quality assurance for cloud-based systems
-	\item War stories and lessons learned
-	\item Performance and scalability testing
-	\item Testing the reliability and availability of database systems
-	\item Algorithms and techniques for automatic program verification
-	\item Maximizing code coverage during testing of database systems and applications
-	\item Generation of synthetic data for test databases
-	\item Testing the effectiveness of adaptive policies and components
-	\item Tools for analyzing database management systems (e.g., profilers, debuggers)
-	\item Workload characterization with respect to performance metrics and engine components
-	\item Metrics for test quality, robustness, efficiency, and effectiveness
-	\item Operational aspects such as continuous integration and delivery pipelines
-	\item Security and vulnerability testing
-	\item Experimental reproduction of benchmark results
-	\item Functional and performance testing of interactive data exploration systems
-	\item Tracability, reproducibility and reasoning for ML-based systems
+    \item Testing and benchmarking of learning-based database systems
+    \item Testing of database systems, storage services, and database applications
+    \item Testing of database systems using novel hardware and software technology (non-volatile memory, hardware transactional memory, …)
+    \item Testing heterogeneous systems with hardware accelerators (GPUs, FPGAs, ASICs, …)
+    \item Testing distributed and big data systems
+    \item Testing machine learning systems
+    \item Testing the reliability and availability of database systems
+    \item Performance and scalability testing
+    \item Security and vulnerability testing
+    \item Specific challenges of testing and quality assurance for cloud-based systems
+    \item Tools for analyzing database management systems (e.g., profilers, debuggers)
+    \item Operational aspects such as continuous integration and delivery pipelines
+    \item Workload characterization with respect to performance metrics and engine components
+    \item Metrics for test quality, robustness, efficiency, and effectiveness
+    \item Testing the effectiveness of adaptive policies and components
+    \item Algorithms and techniques for automatic program verification
+    \item Maximizing code coverage during testing of database systems and applications
+    \item Functional and performance testing of interactive data exploration systems
+    \item Generation of synthetic data for test databases
+    \item Tracability, reproducibility and reasoning for ML-based systems
+    \item Reproducibility of database research
+    \item Experimental reproduction of benchmark results
+    \item War stories and lessons learned
 \end{itemize}
 
 \section{Committee}
